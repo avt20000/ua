@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+}
+
+
+body {
+    background-color: black;
+    color: white;
+    margin: 20px;
+}
+
+.topnav {
+  font-family: handwritten-avt;
+  position: sticky;
+  top: 0;
+  z-index: 1000; 
+  background-color: black;
+  padding: 15px;
+  width: 100%;
+  display: flex;              
+  justify-content: center;   
+  align-items: center;     
+}
+
+.topnav2 {
+  font-family: handwritten-avt;
+  /* position: sticky; */
+  top: 0;
+  /* z-index: 1000;  */
+  /* background-color: black; */
+  padding: 15px;
+  width: 100%;
+  display: flex;              
+  justify-content: center;   
+  align-items: center;     
+}
+
+.bottomnav{
+  font-family: handwritten-avt;
+  margin: 25px;
+  padding: 15px;
+  width: 100%;
+  display: flex;              
+  justify-content: center;   
+  align-items: center;   
+}
+
+.ab{
+    color: white;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 3em;
+  margin: 0 10px; 
+  &:hover{
+     color: orange;
+  /* text-decoration: underline dashed; */
+  }
+
+}
+
+.a2 {
+  color: white;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 2em;
+  margin: 0 10px; 
+  &:hover{
+     color: orange;
+  /* text-decoration: underline dashed; */
+  }
+}
+
+
+.topnav a {
+  color: white;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 3em;
+  margin: 0 25px;          
+}
+
+.topnav a:hover {
+  color: orange;
+  /* text-decoration: underline dashed; */
+}
+
+@font-face {
+  font-family: handwritten-avt;
+  src: url(Handwriting-Regular.ttf);
+}
+
+.container1{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.container2{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    
+
+}
+
+
+
+
+.containerL, .containerM, .containerR {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+h1{
+    font-family: p22-cusp-square, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+     font-size: 4em;
+     padding: 20px;
+}
+
+h2 {
+    font-family: handwritten-avt;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3em;
+    padding: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+h3{
+
+    font-family: handwritten-avt;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5em;
+    padding: 20px;
+    margin-top: 50px;
+    color: orange;
+
+
+}
+
+p {
+    font-size: 2rem;
+    font-family: handwritten-avt;
+    text-align: left;
+    
+}
+
+.page {
+    max-width: 100%;   /* never overflow parent */
+    height: auto;      /* keeps aspect ratio */
+    /* display: block;    removes inline spacing gap */
+    object-fit: contain; /* optional: ensures full image fits */
+    margin: 50px;
+}
+
+.page2 {
+    max-width: 50%;   /* never overflow parent */
+    height: auto;      /* keeps aspect ratio */
+    /* display: block;    removes inline spacing gap */
+    object-fit: contain; /* optional: ensures full image fits */
+    margin: 50px;
+}
+
+
+
+#stickersheet {
+  position: relative;      /* anchor for absolutely positioned stickers */
+  width: 500px;
+  height: 800px;
+  padding: 10px;
+  overflow: hidden;
+    background-image: url("./img/linedpaper.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.sticker {
+  width: 140px;            /* set a concrete size to avoid % width weirdness on move */
+  height: auto;
+  cursor: grab;
+  user-select: none;
+  
+}
+
+.sticker.placed {
+  position: absolute;      /* once placed, it’s positioned inside the sheet */
+  cursor: move;
+}
+
+.coverimg{
+    width: 75%;
+}
+
+.myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding: 20px;
+}
+
+.myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ffffff;
+  padding: 10px 0;
+  height: 150px;
+  font-size: 3em;
+  font-family: handwritten-avt;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+.flex-container {
+  margin-left: 100px;
+  margin-right: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  align-items: center;
+  justify-content: center;
+}
+
+.cell{
+  /* border-radius: 10px; */
+  width: 300px;
+  margin: 20px;
+  object-position: center;
+  object-fit: contain;
+  line-height: 75px;
+  /* font-size: 30px; */
+  &:hover {
+    opacity: 0.7;
+  }
+
+}
+    

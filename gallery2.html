@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width"/>
+<head>
+    <title>shorter works</title>
+    <meta name="description" content="my first page" />
+    <meta name="keywords" content="html tutorial template" />
+    <link rel="stylesheet" href="./style.css"/>
+     <link rel="icon" type="image/png" href="./img/favicon.png" />
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/qxb4try.css">
+</head>
+
+<body>
+
+  <div class="container1">
+
+  
+     <div class="topnav2">
+        <a class="a2" href="index.html">home</a>
+        <a class="a2" href="wh.html">white horses</a>
+        <a class="a2" href="gallery.html">big comics</a>
+        <a class="a2" href="gallery2.html">small comics</a>
+        <a class="a2" href="about.html">about</a>
+      </div>
+
+     <h3>shorter works</h3>
+     <h2>sketches and things that only take up one page</h2>
+
+    <div class="flex-container"> 
+          <img onclick="makeBig(this)" class="myImg cell" src="./img/ua_inner_conflict.jpeg" alt="inner conflict" style="width:100%;max-width:300px">
+    <img onclick="makeBig(this)" class="myImg cell" src="./img/ua_aaron.jpeg" alt="aaron" style="width:100%;max-width:300px">
+    <img onclick="makeBig(this)" class="myImg cell" src="./img/ua_smoking.jpeg" alt="smoking" style="width:100%;max-width:300px">
+    <img onclick="makeBig(this)" class="myImg cell" src="./img/strip1.jpeg" alt="" style="width:100%;max-width:300px">
+    <img onclick="makeBig(this)" class="myImg cell" src="./img/strip2.jpeg" alt="" style="width:100%;max-width:300px">
+    <img onclick="makeBig(this)" class="myImg cell" src="./img/strip3.jpeg" alt="" style="width:100%;max-width:300px">
+    <img onclick="makeBig(this)" class="myImg cell" src="./img/strip4.jpeg" alt="" style="width:100%;max-width:300px">
+    <img onclick="makeBig(this)" class="myImg cell" src="./img/strip5.jpeg" alt="" style="width:100%;max-width:300px">
+    <img onclick="makeBig(this)" class="myImg cell" src="./img/strip6.jpeg" alt="" style="width:100%;max-width:300px">
+    <img onclick="makeBig(this)" class="myImg cell" src="./img/strip7.jpeg" alt="" style="width:100%;max-width:300px">
+    <img onclick="makeBig(this)" class="myImg cell" src="./img/strip8.jpeg" alt="" style="width:100%;max-width:300px">
+    <img onclick="makeBig(this)" class="myImg cell" src="./img/strip9.jpeg" alt="" style="width:100%;max-width:300px">
+    <img onclick="makeBig(this)" class="myImg cell" src="./img/s_blam.jpeg" alt="blam!" style="width:100%;max-width:300px">
+    <img onclick="makeBig(this)" class="myImg cell" src="./img/s_earrings.jpeg" alt="earrings" style="width:100%;max-width:300px">    
+    <img onclick="makeBig(this)" class="myImg cell" src="./img/s_crush.jpeg" alt="crush" style="width:100%;max-width:300px">
+    <img onclick="makeBig(this)" class="myImg cell" src="./img/s_fc.jpeg" alt="first contact" style="width:100%;max-width:300px">
+    <img onclick="makeBig(this)" class="myImg cell" src="./img/s_poppers.jpeg" alt="poppers" style="width:100%;max-width:300px">
+     <img onclick="makeBig(this)" class="myImg cell" src="./img/zine_1.jpeg" alt="je ne t'aime pas" style="width:100%;max-width:300px">
+       <img onclick="makeBig(this)" class="myImg cell" src="./img/zine_2.jpeg" alt="tu ne m'aime pas" style="width:100%;max-width:300px">
+
+      </div>
+    
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
+    </div>
+    
+    <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+   
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    
+    function makeBig(theimage) {
+      console.log(theimage)
+     
+      modal.style.display = "block";
+      modalImg.src = theimage.src;
+      captionText.innerHTML = theimage.alt;
+    }
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+      modal.style.display = "none";
+    }
+    </script>
+
+    
+    </body>
+    </html>
+
+</body>
